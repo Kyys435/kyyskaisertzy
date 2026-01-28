@@ -1,0 +1,20 @@
+(function () {
+  function goFS() {
+    const el = document.documentElement;
+
+    if (el.requestFullscreen) el.requestFullscreen();
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else if (el.mozRequestFullScreen) el.mozRequestFullScreen();
+    else if (el.msRequestFullscreen) el.msRequestFullscreen();
+
+    // bersihin event
+    document.removeEventListener("click", goFS);
+    document.removeEventListener("touchstart", goFS);
+    document.removeEventListener("keydown", goFS);
+  }
+
+  // gesture
+  document.addEventListener("click", goFS, { passive: true });
+  document.addEventListener("touchstart", goFS, { passive: true });
+  document.addEventListener("keydown", goFS);
+})();

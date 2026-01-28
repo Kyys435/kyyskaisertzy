@@ -1,0 +1,30 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+
+# Jangan rewrite file atau folder yang nyata
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite untuk semua game di root
+RewriteRule ^hearts$ hearts.html [L]
+RewriteRule ^spades$ spades.html [L]
+RewriteRule ^euchre$ euchre.html [L]
+RewriteRule ^gin-rummy$ gin-rummy.html [L]
+RewriteRule ^double-deck-pinochle$ double-deck-pinochle.html [L]
+RewriteRule ^pinochle$ pinochle.html [L]
+RewriteRule ^canasta$ canasta.html [L]
+RewriteRule ^hand-and-foot$ hand-and-foot.html [L]
+RewriteRule ^whist$ whist.html [L]
+RewriteRule ^rummy$ rummy.html [L]
+RewriteRule ^cribbage$ cribbage.html [L]
+RewriteRule ^crazy-eights$ crazy-eights.html [L]
+RewriteRule ^bridge$ bridge.html [L]
+RewriteRule ^go-fish$ go-fish.html [L]
+RewriteRule ^old-maid$ old-maid.html [L]
+RewriteRule ^sheepshead$ sheepshead.html [L]
+RewriteRule ^twenty-nine$ twenty-nine.html [L]
+RewriteRule ^sergeant-major$ sergeant-major.html [L]
+
+# Opsional: redirect /menu atau /games ke index
+RewriteRule ^menu$ index.html [L]
+RewriteRule ^games$ index.html [L]

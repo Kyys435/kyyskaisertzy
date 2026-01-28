@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head><link rel="canonical" href="https://worldofcardgames.com/pinochle-leaderboard" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="description" content="Leader board for ranked games of Pinochle at World of Card Games. Find out who gained the most Elo points yesterday and who is in the lead."><meta property="og:title" content="Pinochle Daily Leaderboard"><meta property="og:type" content="game"><meta property="og:url" content="https://worldofcardgames.com/pinochle-leaderboard"><meta property="og:image" content="https://worldofcardgames.com/worldofcardgames.jpg?v=99"><meta property="og:description" content="Leader board for ranked games of Pinochle at World of Card Games. Find out who gained the most Elo points yesterday and who is in the lead."><meta property="og:site_name" content="World of Card Games"><meta property="og:email" content="holger@worldofcardgames.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Pinochle Daily Leaderboard</title><link type="text/css" rel="stylesheet" href="https://worldofcardgames.com/assets/css/combined_minified.css"><link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css"><style>#mainContainer.general .helpBox { max-width: 964px; left: 50%; margin-left: -482px; }.container { max-width: 964px; margin: 0 auto; padding: 20px; }.table-container { display: block; }.table-wrapper { margin-bottom: 32px; }table { width: 100%; border-collapse: separate; border-spacing: 0; background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px #CED4DA; }table td, table th { padding: 0; border-right: 1px solid #CED4DA; border-bottom: 1px solid #CED4DA; text-align: center; vertical-align: middle; font-size: 20px; }table td:last-child, table th:last-child { border-right: none; }table tbody tr { height: 64px; }table thead tr { height: 40px; background-color: #F8F9FA; }table thead th { height: 40px; font-size: 16px; }table thead th:first-child { border-top-left-radius: 8px; }table thead th:last-child { border-top-right-radius: 8px; }table tbody td { height: 64px; }table tbody tr:nth-child(even) { background-color: #F8F9FA; }table td:first-child { width: 56px; min-width: 56px; max-width: 56px; }table td:first-child, table th:first-child { padding: 0; }table thead th:first-child { width: auto; min-width: auto; max-width: none; }table td:first-child { position: relative; }table td:first-child img { width: 56px; height: 48px; display: block; margin: 0 auto; }table td:first-child .rank-overlay { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; font-size: 20px; font-weight: 700; color: #E67700; display: flex; align-items: center; justify-content: center; }table td:nth-child(3) { font-weight: 700; text-align: left; }.player-cell { display: flex; align-items: center; gap: 8px; justify-content: flex-start; padding: 0 8px; height: 64px; }.avatar-img { width: 56px; height: 56px; align-self: flex-end; filter: drop-shadow(1px 0 #252525) drop-shadow(-1px 0 #252525) drop-shadow(0 1px #252525) drop-shadow(0 -1px #252525); }h1 { font-size: 32px; font-weight: 700; }h2 { font-size: 24px; font-weight: 700; margin: 0; }h3 { font-size: 20px; font-weight: 700; margin: 12px 0; }.leaderboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }.leaderboard-toggle { display: flex; }.button { border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 18px; height: 24px; line-height: 24px; display: inline-block; text-align: center; padding: 0 8px; box-sizing: border-box; cursor: pointer; border: none; white-space: nowrap; margin-right: 8px; }.button:last-child { margin-right: 0; }.button.inactive:hover { text-decoration: underline; }.button.active { background-color: #228be6; box-shadow: inset 0px 0px 0px 1px #1c7ed6; color: #fff; }.button.inactive { background-color: #a5d8ff; box-shadow: inset 0px 0px 0px 1px #339af0; color: #1665ad; }.change-positive { color: #4F800B; font-weight: 700; padding-left: 20px; }.change-negative { color: #B52626; font-weight: 700; padding-left: 20px; }.change-neutral { font-weight: 700; }.change-positive { background: url(https://worldofcardgames.com/assets/images/arrowPlus.png) no-repeat left center; background-size: 16px 16px; }.change-negative { background: url(https://worldofcardgames.com/assets/images/arrowMinus.png) no-repeat left center; background-size: 16px 16px; }.dataTables_wrapper { margin-top: 16px; width: 100%; max-width: 100%; box-sizing: border-box; }/* Horizontal scroll only for the table, not info/paging */.table-scroll { overflow-x: auto; width: 100%; }.table-scroll > table.dataTable { display: table; width: auto; min-width: 100%; }/* Only the table should scroll horizontally (info/paging fixed) */.table-wrapper { position: relative; }.table-wrapper table { display: table; width: auto; min-width: 100%; }.table-scroll { overflow-x: auto; width: 100%; }.table-scroll::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: 6px; box-shadow: inset 0 0 0 1px #CED4DA; }.dataTables_filter { margin-bottom: 12px; }.dataTables_filter input { padding: 6px 12px; border: 1px solid #CED4DA; border-radius: 4px; }.player-header-container { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; }.player-header-title { flex-shrink: 0; }.player-search-input { flex: 1; height: 32px; padding: 0 12px; border: none; border-radius: 6px; box-shadow: inset 0px 0px 0px 1px #ced4da; box-sizing: border-box; font-size: 14px; min-width: 0; max-width: 120px; }.player-search-input::placeholder { color: #868e96; font-weight: normal; }.dataTables_length select { padding: 6px 12px; border: 1px solid #CED4DA; border-radius: 4px; }.dataTables_info, .dataTables_paginate { margin-top: 12px; }div.dt-container { display: flex; flex-wrap: wrap; }div.dt-container > table { width: 100%; }div.dt-container > .dt-info { flex: 0 0 auto; margin-top: 12px; position: absolute; top: 100%; }div.dt-container > .dt-paging { flex: 0 0 auto; margin-left: auto; margin-top: 12px; position: absolute; top: 100%; right: 0; }div.dt-container .dt-paging .dt-paging-button { box-sizing: border-box; display: inline-block; min-width: auto !important; padding: 0 !important; margin: 0 4px !important; text-align: center; text-decoration: none !important; cursor: pointer; color: inherit !important; border: none !important; border-radius: 0; background: transparent !important; }div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover { font-weight: 700; text-decoration: underline !important; background: transparent !important; border: none !important; color: inherit !important; }div.dt-container .dt-paging .dt-paging-button:hover:not(.previous):not(.next) { text-decoration: underline !important; color: inherit !important; }div.dt-container .dt-paging .dt-paging-button.first, div.dt-container .dt-paging .dt-paging-button.last { display: none; }div.dt-container .dt-paging .dt-paging-button.previous, div.dt-container .dt-paging .dt-paging-button.next { font-size: 0.7em; color: #868E96 !important; min-width: auto !important; margin-left: 6px !important; margin-right: 0px !important; }div.dt-container .dt-paging .dt-paging-button.previous.disabled, div.dt-container .dt-paging .dt-paging-button.next.disabled { color: #CED4DA !important; }div.dt-container .dt-paging .ellipsis { pointer-events: none; padding: 0 6px 0 4px !important; }div.dt-container .dt-paging .dt-paging-button:active { background: transparent !important; box-shadow: none !important; outline: none; }table.dataTable thead th { color: #000000; }table.dataTable>thead>tr>th, table.dataTable>thead>tr>td { padding: 0 30px 0 12px !important; white-space: nowrap; border-bottom: 1px solid #CED4DA !important; }table.dataTable>thead>tr>th.dt-orderable-none, table.dataTable>thead>tr>td.dt-orderable-none { padding: 0 12px !important; }table.dataTable>tbody>tr>th, table.dataTable>tbody>tr>td { padding: 0 !important; }div.dt-container.dt-empty-footer tbody>tr:last-child>* { border-bottom: none; }table.dataTable tbody tr td.dt-type-numeric, table.dataTable thead tr th.dt-type-numeric { text-align: center; }table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:after, table.dataTable thead>tr>th.dt-orderable-desc span.dt-column-order:before, table.dataTable thead>tr>th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:after, table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:after, table.dataTable thead>tr>td.dt-orderable-desc span.dt-column-order:before, table.dataTable thead>tr>td.dt-orderable-desc span.dt-column-order:after, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:after, table.dataTable thead>tr>td.dt-ordering-desc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-desc span.dt-column-order:after { font-size: 0.7em; }table.dataTable thead>tr>th.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:before, table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before { color: #868E96; margin-bottom: 1px; opacity: 1; }table.dataTable thead>tr>th.dt-orderable-desc span.dt-column-order:after, table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after, table.dataTable thead>tr>td.dt-orderable-desc span.dt-column-order:after, table.dataTable thead>tr>td.dt-ordering-desc span.dt-column-order:after { color: #868E96; margin-top: 1px; opacity: 1; }table.dataTable thead>tr>th.dt-ordering-asc span.dt-column-order:before { color: #000000; opacity: 1; }table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after { color: #000000; opacity: 1; }table.dataTable thead>tr>th.dt-orderable-asc:hover, table.dataTable thead>tr>th.dt-orderable-desc:hover, table.dataTable thead>tr>td.dt-orderable-asc:hover, table.dataTable thead>tr>td.dt-orderable-desc:hover { outline: none; text-decoration: underline; }</style><style>
+    @media (max-width: 964px) { #mainContainer.general .helpBox { max-width: 100%; left: inherit; margin-left: inherit; } }
+    @media (max-width: 576px) { 
+      .container { padding: 12px; }
+      .leaderboard-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .leaderboard-toggle { width: 100%; }
+    }
+  </style><script>document.addEventListener('DOMContentLoaded', () => {const params = new URLSearchParams(window.location.search);if (params.get("text-only") === "true") {const explainer = document.querySelector(".explainer");if (explainer) explainer.style.display = "none";}});</script></head><body><div id="mainContainer" class="general unselectable"><div id="menuBarContainer"><div id="menuIconContainer"><img src="https://worldofcardgames.com/assets/images/menuBurger.png" alt="menu" width="24px" height="24px" /></div><a id="menuLogoContainer" href="/"><img src="https://worldofcardgames.com/assets/images/logo.png" alt="menu" width="170px" height="32px" /></a><div id="userBarContainer"><ul id="userBar"><li class="ad disabled">Ad</li><li class="userBarPlaceHolder disabled displayInline">...</li><li class="username selectable disabled"></li><li class="inbox disabled"></li><li class="register disabled">Register</li><li class="login disabled">Login</li><li class="logout disabled">Logout</li></ul></div><ul id="menuBar"><li><a href="/hearts">Hearts</a></li><li><a href="/spades">Spades</a></li><li><a href="/euchre">Euchre</a></li><li><a href="/gin-rummy">Gin Rummy</a></li><li><a href="/double-deck-pinochle">Double Deck Pinochle</a></li><li><a href="/pinochle">Pinochle</a></li><li><a href="/canasta">Canasta</a></li><li class="dropdown"><span>All games</span><div id="allGames"><a href="/hand-and-foot">Hand &amp; Foot</a><a href="/whist">Whist</a><a href="/rummy">Rummy</a><a href="/cribbage">Cribbage</a><a href="/crazy-eights">Crazy Eights</a><a href="/bridge">Bridge</a><a href="/go-fish">Go Fish</a><a href="/old-maid">Old Maid</a><a href="/sheepshead">Sheepshead</a><a href="/twenty-nine">Twenty-Nine</a><a href="/sergeant-major">Sergeant Major</a><a href="https://online-solitaire.com/" target="_blank">Solitaire</a><a href="https://online-solitaire.com/freecell" target="_blank">FreeCell</a><a href="https://online-solitaire.com/spider-solitaire" target="_blank">Spider Solitaire</a><a href="https://2048-online.io/" target="_blank">2048 Game</a></div></li></ul></div><div class="helpBox"><div class="content" id="content"><div class="container"><h1>Pinochle Daily Leaderboard</h1><p>Track your ranking and compete with other Pinochle players across three different timeframes. The daily leaderboard shows players who have competed in the last 24 hours, weekly includes the last 7 days, and monthly features the last 30 days.</p><br /><p>Your Elo rating measures your competitive skill. When you play ranked games, your score adjusts based on wins and losses, which determines your position on the leaderboard. The more you win, the higher you'll rank!</p><br /><p>The leaderboard refreshes daily. It was last updated on <strong><span id="last-updated">Jan 22 at 12:00 AM GMT-5</span></strong> and the next refresh is in <strong><span id="countdown-timer"></span></strong>.</p><br /><p class="explainer">New to Pinochle or want to improve your game? Check out our <a href="/how-to-play-pinochle">how to play Pinochle</a> guide. When you're ready to compete, <a href="/pinochle">play Pinochle online</a> and start climbing the ranks!</p><br /><div class="table-container"><div class="leaderboard-header"><h2 class="leaderboard-title">Daily Leaderboard</h2><div class="leaderboard-toggle"><a class="button active" data-period="daily">Daily</a><a class="button inactive" data-period="weekly">Weekly</a><a class="button inactive" data-period="monthly">Monthly</a></div></div><div class="table-wrapper table-daily"><table><thead><tr><th>Rank</th><th>Rank +/-</th><th>Player</th><th>Elo</th><th>Elo +/-</th></tr></thead><tbody></tbody></table></div><div class="table-wrapper table-weekly" style="display: none;"><table><thead><tr><th>Rank</th><th>Rank +/-</th><th>Player</th><th>Elo</th><th>Elo +/-</th></tr></thead><tbody></tbody></table></div><div class="table-wrapper table-monthly" style="display: none;"><table><thead><tr><th>Rank</th><th>Rank +/-</th><th>Player</th><th>Elo</th><th>Elo +/-</th></tr></thead><tbody></tbody></table></div></div></div></div><div class="footer-basic"><footer><ul class="list-inline"><li class="list-inline-item"><strong>Games</strong></li><li class="list-inline-item skipAddingSuits"><a href="/hearts">Hearts</a></li><li class="list-inline-item skipAddingSuits"><a href="/spades">Spades</a></li><li class="list-inline-item"><a href="/euchre">Euchre</a></li><li class="list-inline-item"><a href="/gin-rummy">Gin Rummy</a></li><li class="list-inline-item"><a href="/double-deck-pinochle">Double Deck Pinochle</a></li><li class="list-inline-item"><a href="/canasta">Canasta</a></li><li class="list-inline-item"><a href="/rummy">Rummy</a></li></ul><ul class="list-inline"><li class="list-inline-item">&nbsp;</li><li class="list-inline-item"><a href="/pinochle">Pinochle</a></li><li class="list-inline-item"><a href="/go-fish">Go Fish</a></li><li class="list-inline-item"><a href="/whist">Whist</a></li><li class="list-inline-item"><a href="/twenty-nine">Twenty Nine</a></li><li class="list-inline-item"><a href="/sergeant-major">Sergeant Major</a></li><li class="list-inline-item"><a href="https://papergames.io/">Board Games</a></li></ul><ul class="list-inline"><li class="list-inline-item"><strong>Resources</strong></li><li class="list-inline-item"><a href="/about">About</a></li><li class="list-inline-item"><a href="https://worldofcardgames.com/blog/">Blog</a></li><li class="list-inline-item"><a href="/world-of-card-games-privacy-policy">Privacy Policy</a></li><li class="list-inline-item"><a href="/world-of-card-games-terms-of-use">ToS</a></li></ul><ul class="list-inline"><li class="list-inline-item"><strong>Contact</strong></li><li class="list-inline-item"><a href="/contact">Email Info</a></li><li class="list-inline-item"><div class="social"><a href="https://twitter.com/WorldOfCardGamz"><img src="https://worldofcardgames.com/twitter-48.png" alt="Twitter" loading="lazy" width="32px" height="32px" /></a><a href="https://www.facebook.com/WorldOfCardGames/"><img src="https://worldofcardgames.com/facebook-48.png" alt="Facebook" loading="lazy" width="32px" height="32px" /></a><a href="https://www.youtube.com/c/Worldofcardgames"><img src="https://worldofcardgames.com/youtube-48.png" alt="YouTube" loading="lazy" width="32px" height="32px" /></a></div></li></ul></footer></div></div><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script><script>
+    $(document).ready(function() {
+      // Countdown timer - updates run at 11:55 PM EST (23:55)
+      function updateCountdown() {
+        var now = new Date();
+        
+        // Convert to EST (UTC-5)
+        var estOffset = -5 * 60; // EST is UTC-5
+        var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        var estNow = new Date(utc + (estOffset * 60000));
+        
+        // Next update is at 23:55 EST today or tomorrow
+        var nextUpdate = new Date(estNow);
+        nextUpdate.setHours(23, 55, 0, 0);
+        
+        // If we've passed 23:55 today, use tomorrow
+        if (estNow > nextUpdate) {
+          nextUpdate.setDate(nextUpdate.getDate() + 1);
+        }
+        
+        // Calculate difference
+        var diff = nextUpdate - estNow;
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        // Format as HH:MM:SS
+        var pad = function(n) { return n < 10 ? '0' + n : n; };
+        var countdownText = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+        $('#countdown-timer').text(countdownText);
+      }
+      
+      updateCountdown();
+      setInterval(updateCountdown, 1000); // Update every second
+      
+      // Store DataTable instances by period for tab switching
+      var dataTablesByPeriod = {};
+      
+      // Toggle between daily, weekly, monthly
+      $('.leaderboard-toggle .button').on('click', function() {
+        var period = $(this).data('period');
+        var titleText = period.charAt(0).toUpperCase() + period.slice(1) + ' Leaderboard';
+        
+        // Update button states
+        $('.leaderboard-toggle .button').removeClass('active').addClass('inactive');
+        $(this).removeClass('inactive').addClass('active');
+        
+        // Update title
+        $('.leaderboard-title').text(titleText);
+        
+        // Show corresponding table
+        $('.table-wrapper').hide();
+        $('.table-' + period).show();
+        
+        // Recalculate DataTables layout for the newly visible table
+        if (dataTablesByPeriod[period]) {
+          dataTablesByPeriod[period].columns.adjust().draw();
+        }
+      });
+      
+      $('.table-wrapper table').each(function() {
+        var $table = $(this);
+        var $wrapper = $table.closest('.table-wrapper');
+        var period = $wrapper.hasClass('table-daily') ? 'daily' : 
+                     $wrapper.hasClass('table-weekly') ? 'weekly' : 'monthly';
+        var columnCount = $table.find('thead tr th').length;
+        
+        // Disable sorting on Player column only
+        var columnDefs = [
+          { orderable: false, targets: 2 },  // Player column
+          { type: 'num', targets: [0, 1, 3, 4] } // Rank, Rank +/-, Elo, Elo +/- are numeric
+        ];
+        
+        // For games with extra stats columns, make them sortable too
+        if (columnCount > 5) {
+          // Has special columns (Hearts/Spades) - ratio, drops, holds
+          columnDefs.push({ type: 'num', targets: [5, 6, 7] });
+          // Ratio values like "45 %" or "-" should sort numerically
+          columnDefs.push({
+            targets: 5,
+            render: function(data, type) {
+              if (type === 'sort' || type === 'type') {
+                var str = String(data == null ? '' : data);
+                if (str === '-' || str === '') return -1;
+                var n = parseInt(str.replace(/[^0-9-]/g, ''), 10);
+                return isNaN(n) ? -1 : n;
+              }
+              return data;
+            }
+          });
+          // Drops/Holds may be "-"; treat those as lowest numeric for sorting
+          columnDefs.push({
+            targets: [6, 7],
+            render: function(data, type) {
+              if (type === 'sort' || type === 'type') {
+                var n = parseInt(String(data), 10);
+                return isNaN(n) ? -1 : n;
+              }
+              return data;
+            }
+          });
+        }
+        
+        var table = $table.DataTable({
+          pageLength: 10,
+          lengthChange: false,
+          pagingType: 'full_numbers',
+          searching: true,
+          dom: 'rtip',
+          order: [[0, 'asc']], // Sort by Rank ascending by default
+          columnDefs: columnDefs,
+          ordering: {
+            indicators: {
+              asc: '▲',
+              desc: '▼'
+            }
+          },
+          language: {
+            info: "_START_-_END_ of _TOTAL_ players",
+            infoEmpty: "No players found",
+            paginate: {
+              previous: '◀',
+              next: '▶'
+            }
+          },
+          infoCallback: function(settings, start, end, max, total, pre) {
+            return start + '-' + end + ' of ' + total + ' players';
+          },
+          initComplete: function() {
+            var $playerHeader = $table.find('thead th:eq(2)');
+            var headerText = $playerHeader.text();
+            $playerHeader.html('<div class="player-header-container"><span class="player-header-title">' + headerText + '</span><input type="text" placeholder="Search" class="player-search-input" /></div>');
+            
+            $playerHeader.find('.player-search-input').on('keyup change', function() {
+              table.search(this.value).draw();
+            });
+            // Wrap only the actual table so info/paging don't scroll
+            if (!$table.parent().hasClass('table-scroll')) {
+              $table.wrap('<div class="table-scroll"></div>');
+            }
+          }
+        });
+        
+        // Store reference for tab switching
+        dataTablesByPeriod[period] = table;
+      });
+    });
+  </script></body></html>

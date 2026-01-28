@@ -1,0 +1,106 @@
+{
+  "name": "Kyys Mod Apeka - Request - Download - Install",
+  "short_name": "KyysMod",
+  "id": "/?app_id=kyysmod",
+  "start_url": "https://kyysmodapekaa.edgeone.dev/?utm_source=pwa_home",
+  "scope": "https://kyysmodapekaa.edgeone.dev/",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "description": "𝗞𝘆𝘆𝘀 𝗠𝗼𝗱 𝗔𝗽𝗲𝗸𝗮 — Platform MOD aman, cepat, dan stylish. Nikmati download aplikasi mod tanpa virus, tampilan elegan, dan performa ringan di semua perangkat.",
+  "categories": ["tools", "entertainment", "utilities", "productivity"],
+  "background_color": "#0a0f1a",
+  "theme_color": "#0a0f1a",
+  "theme_color_dark": "#0a0f1a",
+  "theme_color_light": "#ffffff",
+  "prefer_related_applications": false,
+  "iarc_rating_id": "E10+",
+
+  "icons": [
+    {
+      "src": "https://kyysmodapekaa.edgeone.dev/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://kyysmodapekaa.edgeone.dev/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.ibb.co.com/wNsy0D91/99c2e93383c3797268268465d01ae928.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "🧩 Request MOD Baru",
+      "short_name": "Request",
+      "description": "Ajukan permintaan aplikasi MOD favoritmu.",
+      "url": "https:///kyysmodapekaa.edgeone.dev/REQ?utm_source=pwa_shortcut"
+    },
+    {
+      "name": "🔥 MOD Populer",
+      "short_name": "Populer",
+      "description": "Lihat koleksi MOD paling banyak diunduh.",
+      "url": "https://kyysmodapekaa.edgeone.dev/popular?utm_source=pwa_shortcut"
+    },
+    {
+      "name": "💬 Hubungi Support",
+      "short_name": "Support",
+      "description": "Butuh bantuan? Hubungi tim Kyys Mod Apeka.",
+      "url": "https://kyysmodapekaa.edgeone.dev/contact?utm_source=pwa_shortcut"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "https://kyysmodapekaa.edgeone.dev/assets/screenshots/preview1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "Beranda Kyys Mod Apeka — Tampilan Elegan"
+    },
+    {
+      "src": "https://kyysmodapekaa.edgeone.dev/assets/screenshots/preview2.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "Koleksi MOD Aman & Bebas Virus"
+    },
+    {
+      "src": "https://kyysmodapekaa.edgeone.dev/assets/screenshots/preview3.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "label": "UI Modern, Ringan, dan Responsif"
+    }
+  ],
+
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://kyysmodapekaa.edgeone.dev/"
+    }
+  ],
+
+  "protocol_handlers": [
+    {
+      "protocol": "kyysmod",
+      "url": "https://kyysmodapekaa.edgeone.dev/open?mod=%s"
+    }
+  ],
+
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
+}

